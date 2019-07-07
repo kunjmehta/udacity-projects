@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kunj.scorekeeper.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+            android:background="#e0e0e0"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#ff0000"
+            android:contentDescription="Manchester United"
+            android:src="@drawable/team1" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/goals_United_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/goals_United_Button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/goals_United_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="addGoalsUnited"/>
+
+
+            <TextView
+                android:id="@+id/shots_United_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/shots_United_Button"
+                app:layout_constraintTop_toBottomOf="@id/goals_United_Field" />
+
+            <Button
+                android:id="@+id/shots_United_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goals_United_Button" />
+
+
+            <TextView
+                android:id="@+id/sot_United_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/sot_United_Button"
+                app:layout_constraintTop_toBottomOf="@id/shots_United_Field" />
+
+            <Button
+                android:id="@+id/sot_United_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shots_United_Button" />
+
+
+            <TextView
+                android:id="@+id/fouls_United_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/fouls_United_Button"
+                app:layout_constraintTop_toBottomOf="@id/sot_United_Field" />
+
+            <Button
+                android:id="@+id/fouls_United_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sot_United_Button" />
+
+
+            <TextView
+                android:id="@+id/yellow_United_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/yellow_United_Button"
+                app:layout_constraintTop_toBottomOf="@id/fouls_United_Field" />
+
+            <Button
+                android:id="@+id/yellow_United_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fouls_United_Button" />
+
+
+            <TextView
+                android:id="@+id/red_United_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/red_United_Button"
+                app:layout_constraintTop_toBottomOf="@id/yellow_United_Field" />
+
+            <Button
+                android:id="@+id/red_United_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yellow_United_Button" />
+
+
+            <TextView
+                android:id="@+id/corners_United_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/corners_United_Button"
+                app:layout_constraintTop_toBottomOf="@id/red_United_Field" />
+
+            <Button
+                android:id="@+id/corners_United_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/red_United_Button" />
+
+
+            <TextView
+                android:id="@+id/offside_United_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/offside_United_Button"
+                app:layout_constraintTop_toBottomOf="@id/corners_United_Field" />
+
+            <Button
+                android:id="@+id/offside_United_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/corners_United_Button"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+           android:background="#c2c2c2"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Logo"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/goals_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="GOALS"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shots_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="SHOTS"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sot_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="ON TARGET"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fouls_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="FOULS"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/yellow_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="YELLOW CARDS"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="7sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/red_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="RED CARDS"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/corners_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="CORNERS"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/offside_text"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="OFFSIDES"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+            android:background="#e0e0e0">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#ADD8E6"
+            android:contentDescription="Manchester City"
+            android:src="@drawable/team2" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/goals_City_Field"
+            android:layout_width="30dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/goals_City_Button"
+            android:layout_width="90dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:background="@android:color/holo_blue_light"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="+1"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@id/goals_City_Field"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/shots_City_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/goals_City_Field"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/shots_City_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/shots_City_Field"
+                app:layout_constraintTop_toBottomOf="@id/goals_City_Button"/>
+
+            <TextView
+                android:id="@+id/sot_City_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/shots_City_Field"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/sot_City_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/sot_City_Field"
+                app:layout_constraintTop_toBottomOf="@id/shots_City_Button"/>
+
+
+            <TextView
+                android:id="@+id/fouls_City_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/sot_City_Field"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/fouls_City_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/fouls_City_Field"
+                app:layout_constraintTop_toBottomOf="@id/sot_City_Button"/>
+
+
+            <TextView
+                android:id="@+id/yellow_City_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/fouls_City_Field"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/yellow_City_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/yellow_City_Field"
+                app:layout_constraintTop_toBottomOf="@id/fouls_City_Button"/>
+
+            <TextView
+                android:id="@+id/red_City_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/yellow_City_Field"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/red_City_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/red_City_Field"
+                app:layout_constraintTop_toBottomOf="@id/yellow_City_Button"/>
+
+
+            <TextView
+                android:id="@+id/corners_City_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/red_City_Field"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/corners_City_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/corners_City_Field"
+                app:layout_constraintTop_toBottomOf="@id/red_City_Button"/>
+
+
+            <TextView
+                android:id="@+id/offside_City_Field"
+                android:layout_width="30dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/corners_City_Field"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                android:id="@+id/offside_City_Button"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="+1"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/offside_City_Field"
+                app:layout_constraintTop_toBottomOf="@id/corners_City_Button"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:orientation="horizontal"
+        android:background="#FF9800">
+
+    <TextView android:id="@+id/team1_score"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="52dp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:textSize="40sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="52dp"
+        android:textColor="@android:color/black"
+        android:text="-"
+        android:textSize="40sp"
+        android:gravity="center"/>
+
+        <TextView android:id="@+id/team2_score"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="52dp"
+            android:textColor="@android:color/black"
+            android:text="0"
+            android:textSize="40sp"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
